@@ -27,3 +27,9 @@ module.exports.getAllProfiles = (request, response) => {
         .then(profiles => response.json(profiles))
         .catch(err => response.json(err))
 }
+
+module.exports.getEmail = (request, response) => {
+    Profile.find({email:request.params.email})
+        .then(profile => response.json(profile))
+        .catch(err => response.json(err))
+}
