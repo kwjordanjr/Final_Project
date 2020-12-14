@@ -31,7 +31,6 @@ export default () => {
     const onSubmitHandler = e => {
         e.preventDefault();
         console.log(account);
-        this.forceUpdate();
         
     }
     useEffect(()=>{
